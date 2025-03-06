@@ -1,0 +1,26 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start:pm2": "pm2 start server.js  --watch  --attach",
+    "start:nodemon": "nodemon server.js",
+    "dev": "pm2 start server.js --name ai-interview-be --watch --log logs/output.log --error logs/error.log --attach",
+    "stop": "pm2 stop an-interview-be",
+    "restart": "pm2 restart an-interview-be",
+    "logs": "pm2 logs an-interview-be --lines 100"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongodb": "^6.14.2",
+    "mongoose": "^8.12.1",
+    "pino": "^9.6.0",
+    "pino-pretty": "^13.0.0"
+  }
+}
