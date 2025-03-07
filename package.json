@@ -3,12 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start:pm2": "pm2 start server.js  --watch  --attach",
-    "start:nodemon": "nodemon server.js",
-    "dev": "pm2 start server.js --name ai-interview-be --watch --log logs/output.log --error logs/error.log --attach",
-    "stop": "pm2 stop an-interview-be",
-    "restart": "pm2 restart an-interview-be",
-    "logs": "pm2 logs an-interview-be --lines 100"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "keywords": [],
   "author": "",

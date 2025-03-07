@@ -6,7 +6,6 @@ const transactionRoutes = require('./routes/transactionRoutes');
 const logger = require("./logger");
 const errorController = require('./utils/errorController');
 const AppError = require('./utils/appError');
-console.log("sssssssssss",process.env.MONGO_URI);
 const app = express();
 const PORT = process.env.PORT || 5000;
 
