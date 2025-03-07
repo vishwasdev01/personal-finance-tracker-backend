@@ -1,16 +1,20 @@
 const pino = require('pino');
-// const rfs = require('rotating-file-stream');
-// const path = require('path');
 require('dotenv').config();
+
+const isDev = process.env.NODE_ENV === 'development';
+
 const logger = pino({
     level: 'debug',
-    transport: {
-              target: 'pino-pretty',
-              options: {
-                  colorize: true,
-                  translateTime: 'yyyy-mm-dd HH:MM:ss',
-                  ignore: 'pid,hostname'
-              }
-          }
+    ...(isDev && {
+        transport: {
+            target: 'pino-pretty',
+            options: {
+                colorize: true,
+                translateTime: 'yyyy-mm-dd HH:MM:ss',
+                ignore: 'pid,hostname'
+            }
+        }
+    })
 });
+
 module.exports = logger;
