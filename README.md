@@ -18,15 +18,9 @@ NODE_ENV=development
 
  ### **1️⃣Running the Server
 
- ### **1️⃣ Start with Nodemon (for Development)
+ ### **1️⃣ Start with  (for Development)
 
-npm run start:nodemon
-
- ### **1️⃣ Start with PM2 (for Production)
-
-npm run start:pm2
-
-✅ PM2 will watch for file changes and restart the server automatically.
+npm start
 
  ### **1️⃣ Restart or Stop PM2 Process
 
