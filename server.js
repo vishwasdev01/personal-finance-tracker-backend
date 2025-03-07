@@ -34,6 +34,10 @@ mongoose.connect(process.env.MONGO_URI, {
 .catch(err => logger.error(err));
 
 // Routes
+app.get("/",(_,res)=> {
+    res.send({message:"running server on port 5000"})
+})
+
 app.use('/api/transactions', transactionRoutes);
 
 app.all("*", (req, res, next) => {
@@ -41,6 +45,7 @@ app.all("*", (req, res, next) => {
   });
 
 app.use(errorController)
+
 
 // Start Server
 app.listen(PORT, () => logger.info(`Server running on port ${PORT}`));
